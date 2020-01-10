@@ -270,20 +270,32 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./client/Facts.js":
-/*!*************************!*\
-  !*** ./client/Facts.js ***!
-  \*************************/
+/***/ "./client/ChuckNorris.js":
+/*!*******************************!*\
+  !*** ./client/ChuckNorris.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Facts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ChuckNorris; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -304,102 +316,200 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
+var ChuckNorris =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ChuckNorris, _Component);
+
+  function ChuckNorris() {
+    var _this;
+
+    _classCallCheck(this, ChuckNorris);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ChuckNorris).call(this));
+    _this.state = {
+      jokes: []
+    };
+    return _this;
+  }
+
+  _createClass(ChuckNorris, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var url = "https://api.chucknorris.io/jokes/random";
+      var data = axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url).then(function (data) {
+        return data.data.value;
+      }).then(function (data) {
+        _this2.setState({
+          jokes: [].concat(_toConsumableArray(_this2.state.jokes), [data])
+        });
+      });
+    }
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      window.location.reload();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "chuck_page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "fails-head"
+      }, "chuck norris page title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://images-na.ssl-images-amazon.com/images/I/51IY4ohvfUL.jpg"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "chuck_con"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        onClick: this.refresh
+      }, "Click to get a new Joke"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "jokes"
+      }, " ", "Here you go:", this.state.jokes && this.state.jokes.map(function (joke) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: joke
+        }, joke);
+      }))));
+    }
+  }]);
+
+  return ChuckNorris;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./client/Facts.js":
+/*!*************************!*\
+  !*** ./client/Facts.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Facts; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
 var Facts =
 /*#__PURE__*/
 function (_Component) {
   _inherits(Facts, _Component);
 
-  function Facts() {
+  function Facts(props) {
+    var _this;
+
     _classCallCheck(this, Facts);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Facts).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Facts).call(this, props));
+    _this.state = {
+      facts: [],
+      number: 0,
+      pic: []
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.refresh = _this.refresh.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Facts, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var url = "http://numbersapi.com/random";
+      var data = axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url).then(function (data) {
+        _this2.setState({
+          facts: [data.data]
+        });
+      });
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(ev) {
+      var _this$setState;
+
+      this.setState((_this$setState = {}, _defineProperty(_this$setState, ev.target.name, ev.target.value), _defineProperty(_this$setState, "number", ev.target.value), _this$setState));
+    }
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      var _this3 = this;
+
+      var url = "http://numbersapi.com/".concat(this.state.number);
+      var data = axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url).then(function (data) {
+        _this3.setState({
+          facts: [data.data]
+        });
+      }).then(axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("https://picsum.photos/200/300").then(function (pic) {
+        _this3.setState({
+          pic: [pic.config.url]
+        });
+      }));
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this4 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "the-facts"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "fact-page"
       }, "Time you enjoy wasting is not wasted time"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cropped-hand-of-man-holding-adhesive-note-with-royalty-free-image-1577480229.jpg?crop=0.88889xw:1xh;center,top&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The hashtag symbol is technically called an octothorpe. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "According to the Merriam-Webster dictionary, the \"octo-\" prefix refers to the eight points on the popular symbol, but the \"thorpe\" remains a mystery. One theory claims that it comes from the Old English word for \"village,\" based on the idea that the symbol looks like a village surrounded by eight fields!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/chef-holding-large-bowl-in-commercial-kitchen-royalty-free-image-1577480935.jpg?crop=1xw:1xh;center,top&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "JUICE IMAGESGETTY IMAGES The 100 folds in a chef's hat represent 100 ways to cook an egg..", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Yes, that tall, pleated white hat that chefs wear \u2014 technically called a toque \u2014 has 100 folds for a reason! According to Reclutant Gourmet, the pleats used to signify a chef's level of experience, like the number of ways he or she knew how to prepare eggs."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "facts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "fact-pics",
-        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sub-fact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The longest wedding veil was longer than 63 football fields.", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you thought Meghan Markle's wedding veil was long, get this: there's a woman in Cyprus who set the Guinness World Record for the longest wedding veil. How long was it, you ask? Nearly 23,000 feet, which is the same length as about 63.5 football fields."))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " ", this.state.number), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "conti"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        id: "myText",
+        placeholder: "Pick a Number",
+        onChange: this.handleChange
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        onClick: this.refresh
+      }, "GO!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "texting"
+      }, this.state.facts && this.state.facts.map(function (fact, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, fact), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _this4.state.pic
+        }));
+      })))));
     }
   }]);
 
@@ -597,7 +707,11 @@ var Header = function Header() {
     activeClassName: "active",
     to: "/fails",
     className: "links"
-  }, "Watch Fails"))));
+  }, "Watch Fails"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    activeClassName: "active",
+    to: "/chuckNorris",
+    className: "links"
+  }, "Chuck Norris!"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -682,12 +796,14 @@ function (_Component) {
   _createClass(Weather, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "weather-container"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "body_con"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "weather-header"
+        className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "icon"
+        className: "header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("canvas", {
         id: "icon",
         width: "100",
@@ -695,31 +811,36 @@ function (_Component) {
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "general-info"
+        className: "general-information"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "status"
-      }, "Enter Location "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "location"
-      }, "To find Weather")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "details-section"
+        className: "status",
+        "data-status": true
+      }, "Enter A Location"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "location",
+        "data-location": true
+      }, "To Find The Weather")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "detail-section"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "details"
+        className: "detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "title"
       }, "Wind"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "value"
+        className: "value",
+        "data-wind": true
       }, "TBD")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "details"
+        className: "detail bordered"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "title"
-      }, "Temperrature"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "value"
+      }, "Temperature"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "value",
+        "data-temperature": true
       }, "TBD")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "details"
+        className: "detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "title"
-      }, "Percip"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "value"
+      }, "Precipitation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "value",
+        "data-precipitation": true
       }, "TBD"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "city-search-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -727,40 +848,15 @@ function (_Component) {
         className: "city-search",
         "data-city-search": true,
         placeholder: "Enter Location"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "https://darksky.net/poweredby",
-        className: "darkSky_log"
-      }, "Powered By Dark Sky")));
+        className: "darksky-logo"
+      }, "Powered By Dark Sky"));
     }
   }]);
 
   return Weather;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-
-var searchElement = document.querySelector("[data-city-search]");
-var searchBox = new google.maps.places.SearchBox(searchElement);
-searchBox.addListener("places_changed", function () {
-  var place = searchBox.getPlaces()[0];
-  if (place == null) return;
-  var latitude = place.geometry.location.lat();
-  var longitude = place.geometry.location.lng();
-  fetch("/weather", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: JSON.stringify({
-      latitude: latitude,
-      longitude: longitude
-    })
-  }).then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    setWeatherData(data, place.formatted_address);
-  });
-}); // create state variables
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // create state variables
 // constructor() {
 //   super();
 //   this.state = {
@@ -818,6 +914,9 @@ searchBox.addListener("places_changed", function () {
 //   // setWeather(data);
 // }
 
+
+
+
 /***/ }),
 
 /***/ "./client/index.js":
@@ -842,9 +941,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Facts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Facts */ "./client/Facts.js");
 /* harmony import */ var _Weather__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Weather */ "./client/Weather.js");
 /* harmony import */ var _Fails__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Fails */ "./client/Fails.js");
+/* harmony import */ var _ChuckNorris__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ChuckNorris */ "./client/ChuckNorris.js");
 // import css
 
  // import react
+
 
 
 
@@ -875,6 +976,10 @@ Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED
   exact: true,
   path: "/fails",
   component: _Fails__WEBPACK_IMPORTED_MODULE_9__["default"]
+}), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
+  exact: true,
+  path: "/chuckNorris",
+  component: _ChuckNorris__WEBPACK_IMPORTED_MODULE_10__["default"]
 }))), document.getElementById("app"));
 
 /***/ }),
@@ -2819,7 +2924,7 @@ module.exports = {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".container-page-content {\n  display: flex;\n  justify-content: center;\n}\n\n.main-pic {\n  width: 100%;\n}\n\n#main-links {\n  display: flex;\n  justify-content: center;\n  background-color: goldenrod;\n}\n\n.product {\n  margin: 10px;\n  width: 35%;\n}\n.links.active {\n  background-color: red;\n}\n.nav {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.thumbnail {\n  width: 90%;\n}\n.product-grid {\n  display: flex;\n  flex-flow: wrap;\n  justify-content: space-evenly;\n}\n\n.facts {\n  display: flex;\n  width: 1200px;\n  margin: 15px;\n  height: 300px;\n}\n.fact-page {\n  display: flex;\n  justify-content: center;\n}\n.the-facts {\n  background-color: lightcoral;\n}\n.weather-page {\n  background-color: lightskyblue;\n}\n.product-page {\n  background-color: lightsalmon;\n}\n.fails-page {\n  background-color: peru;\n}\n.links {\n  margin: 10px;\n}\n.fact-pics {\n  width: 35%;\n}\n.sub-fact {\n  background-color: antiquewhite;\n}\n.fails-container {\n  display: flex;\n  flex-flow: wrap;\n  justify-content: space-evenly;\n}\n.video-links {\n  margin: 15px;\n  width: 40%;\n}\n.product-title {\n  display: flex;\n  justify-content: center;\n}\n", ""]);
+exports.push([module.i, ".container-page-content {\n  display: flex;\n  justify-content: center;\n}\n\n.main-pic {\n  width: 100%;\n}\n\n#main-links {\n  display: flex;\n  justify-content: center;\n  background-color: goldenrod;\n}\n\n.product {\n  margin: 10px;\n  width: 35%;\n}\n.links.active {\n  background-color: red;\n}\n.nav {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.thumbnail {\n  width: 90%;\n}\n.product-grid {\n  display: flex;\n  flex-flow: wrap;\n  justify-content: space-evenly;\n}\n\n.facts {\n  display: flex;\n  width: 1200px;\n  margin: 15px;\n  height: 300px;\n  justify-content: center;\n}\n.fact-page {\n  display: flex;\n  justify-content: center;\n}\n.the-facts {\n  background-color: lightcoral;\n}\n.weather-page {\n  background-color: lightskyblue;\n}\n.product-page {\n  background-color: lightsalmon;\n}\n.fails-page {\n  background-color: peru;\n}\n.links {\n  margin: 10px;\n}\n.fact-pics {\n  width: 35%;\n}\n.sub-fact {\n  background-color: antiquewhite;\n}\n.fails-container {\n  display: flex;\n  flex-flow: wrap;\n  justify-content: space-evenly;\n}\n.video-links {\n  margin: 15px;\n  width: 40%;\n}\n.product-title {\n  display: flex;\n  justify-content: center;\n}\n\n.body_con {\n  background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35));\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  margin: 0;\n  padding: 0;\n}\n\n.container {\n  max-width: 90%;\n  width: 1200px;\n  background-color: white;\n  box-shadow: 0 5px 10px black;\n  border-radius: 5px;\n}\n\n.content {\n  padding: 40px;\n  margin-top: 50px;\n}\n\n.header {\n  background-color: #222;\n  height: 120px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n\n.icon-container {\n  position: relative;\n  top: 70px;\n  padding: 20px;\n  background-color: white;\n  width: 140px;\n  height: 140px;\n  border-radius: 50%;\n}\n\n.general-information {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px;\n}\n\n.status {\n  font-size: 3rem;\n  font-weight: bold;\n}\n\n.location {\n  font-size: 2rem;\n  font-weight: normal;\n  margin-top: 10px;\n}\n\n.detail-section {\n  display: flex;\n  justify-content: space-between;\n  margin-top: 40px;\n}\n\n.detail {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex-basis: 0;\n  flex-grow: 1;\n  padding: 20px;\n}\n\n.detail.bordered {\n  border-left: 1px solid #777;\n  border-right: 1px solid #777;\n}\n\n.detail .title {\n  font-size: 2rem;\n  flex-grow: 1;\n  font-weight: bold;\n  color: #777;\n}\n\n.detail .value {\n  font-size: 2rem;\n  margin-top: 20px;\n}\n\n.city-search-container {\n  display: flex;\n  justify-content: center;\n}\n\n.city-search {\n  margin-top: 40px;\n  font-size: 2rem;\n  outline: none;\n  border: 1px solid #777;\n  border-radius: 5px;\n  padding: 10px 15px;\n  width: 100%;\n}\n\n.pac-item {\n  font-size: 2rem;\n  padding: 10px 10px;\n}\n\n.pac-icon {\n  display: none;\n}\n\n.pac-item-query {\n  font-size: 2rem;\n  padding-right: 14px;\n}\n\n.darksky-logo {\n  position: absolute;\n  bottom: 20px;\n  right: 20px;\n  color: #333;\n  font-size: 1.5rem;\n}\n\n.chuck_page {\n  background: linear-gradient(to right, rgb(255, 167, 35), rgb(255, 97, 35));\n  width: 1200px;\n  display: flex;\n  flex-flow: wrap;\n}\n\n#texting {\n  font-family: Helvetica, sans-serif;\n  width: 50%;\n  font-size: x-large;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

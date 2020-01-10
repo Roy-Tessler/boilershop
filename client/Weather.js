@@ -6,30 +6,40 @@ import { render } from "react-dom";
 export default class Weather extends Component {
   render() {
     return (
-      <body>
-        <div className="weather-container">
-          <div className="weather-header">
-            <div className="icon">
+      <div className="body_con">
+        <div className="container">
+          <div className="header">
+            <div className="icon-container">
               <canvas id="icon" width="100" height="100"></canvas>
             </div>
           </div>
           <div className="content">
-            <div className="general-info">
-              <div className="status">Enter Location </div>
-              <div className="location">To find Weather</div>
+            <div className="general-information">
+              <div className="status" data-status>
+                Enter A Location
+              </div>
+              <div className="location" data-location>
+                To Find The Weather
+              </div>
             </div>
-            <div className="details-section">
-              <div className="details">
+            <div className="detail-section">
+              <div className="detail">
                 <div className="title">Wind</div>
-                <div className="value">TBD</div>
+                <div className="value" data-wind>
+                  TBD
+                </div>
               </div>
-              <div className="details">
-                <div className="title">Temperrature</div>
-                <div className="value">TBD</div>
+              <div className="detail bordered">
+                <div className="title">Temperature</div>
+                <div className="value" data-temperature>
+                  TBD
+                </div>
               </div>
-              <div className="details">
-                <div className="title">Percip</div>
-                <div className="value">TBD</div>
+              <div className="detail">
+                <div className="title">Precipitation</div>
+                <div className="value" data-precipitation>
+                  TBD
+                </div>
               </div>
             </div>
             <div className="city-search-container">
@@ -41,39 +51,15 @@ export default class Weather extends Component {
               />
             </div>
           </div>
-          <a href="https://darksky.net/poweredby" className="darkSky_log">
-            Powered By Dark Sky
-          </a>
         </div>
-      </body>
+        <a href="https://darksky.net/poweredby" className="darksky-logo">
+          Powered By Dark Sky
+        </a>
+      </div>
     );
   }
 }
 
-const searchElement = document.querySelector("[data-city-search]");
-
-const searchBox = new google.maps.places.SearchBox(searchElement);
-searchBox.addListener("places_changed", () => {
-  const place = searchBox.getPlaces()[0];
-  if (place == null) return;
-  const latitude = place.geometry.location.lat();
-  const longitude = place.geometry.location.lng();
-  fetch("/weather", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: JSON.stringify({
-      latitude: latitude,
-      longitude: longitude
-    })
-  })
-    .then(res => res.json())
-    .then(data => {
-      setWeatherData(data, place.formatted_address);
-    });
-});
 // create state variables
 // constructor() {
 //   super();

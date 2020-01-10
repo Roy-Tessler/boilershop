@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-
   return (
     <div>
       <nav className="nav">
@@ -38,6 +37,9 @@ const Header = () => {
           </NavLink>
           <NavLink activeClassName="active" to="/fails" className="links">
             Watch Fails
+          </NavLink>
+          <NavLink activeClassName="active" to="/chuckNorris" className="links">
+            Chuck Norris!
           </NavLink>
         </div>
       </main>

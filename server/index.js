@@ -60,6 +60,7 @@ passport.deserializeUser((id, done) => {
 // routes
 app.use("/auth", require("./auth"));
 app.use("/api", require("./api"));
+app.use("/weather", require("./api/weather"));
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
@@ -69,17 +70,6 @@ app.use(function(err, req, res, next) {
   console.error(err);
   console.error(err.stack);
   res.status(err.status || 500).send(err.message || "Internal server error.");
-});
-
-//Weather App//
-
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
-const DARK_SKY_API_KEY = process.env.DARK_SKY_API_KEY;
-
-app.post("/weather", (req, res) => {
-  console.log(req.body);
 });
 
 // initialization

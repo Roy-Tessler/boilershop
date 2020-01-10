@@ -4,22 +4,17 @@ const Sequelize = require("sequelize");
 // router.use("/customers", require("./customers"));
 // router.use("/products", require("./products"));
 // router.use("/orders", require("./orders"));
-console.log('entered /api');
-router.use('/weather', require('./weather'));
+console.log("entered /api");
+// router.use("/weather", require("./weather"));
 
 const { Product } = require("../db/product");
 
 router.get("/allProducts", async (req, res, next) => {
-  try {
-    const allProducts = await Product.findAll();
-    res.send(allProducts);
-  } catch (error) {
-    next(error);
-  }
+  res.send("HELLO");
 });
 
 router.use(function(req, res, next) {
-  console.log('next error', next);
+  console.log("next error", next);
   const err = new Error("Not found.");
   err.status = 404;
   next(err);
