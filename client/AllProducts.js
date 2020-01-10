@@ -10,13 +10,11 @@ export default class AllProducts extends Component {
             <div className="product-grid">
               <div className="product">
                 <div className="details">
-                  <h1>Remindi</h1>
+                  <h1 className="product-title">Remindi</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Remindi.jpg"
                   />
-                  <span className="price">$89.95</span>
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     Is it possible to make music without some musical
                     instruments in your hands? It is now possible. Thanks to a
@@ -32,17 +30,17 @@ export default class AllProducts extends Component {
                     to configure each sensor separately which offers great
                     possibilities for your art.
                   </p>
+                  <span className="price">$89.95</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Music Angel</h1>
+                  <h1 className="product-title">Music Angel</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Music-Angel.jpg"
                   />
-                  <span className="price">$129.55.00</span>
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     Now, it’s a magic. Their singular speaker is floating in the
                     air and is really impressive and amazing – it flies! Thanks
@@ -54,18 +52,17 @@ export default class AllProducts extends Component {
                     long time. The loudspeaker is compact and ideal for any
                     decor.
                   </p>
+                  <span className="price">$129.55</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -84,18 +81,17 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -114,18 +110,17 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -144,18 +139,17 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -174,18 +168,17 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -204,18 +197,17 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -234,18 +226,17 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
               <div className="product">
                 <div className="details">
-                  <h1>Nanoleaf Aurora</h1>
+                  <h1 className="product-title">Nanoleaf Aurora</h1>
                   <img
                     className="thumbnail"
                     src="https://www.knowover.com/wp-content/uploads/2018/01/Nanoleaf-Aurora.jpg"
                   />
-                  <span className="price">$725.00</span>
-
-                  <button className="add-to-cart">Buy Now</button>
                   <p>
                     What would become of us without beauty? This is what the
                     creators of this particular lamp thought. It is a bit
@@ -264,6 +255,8 @@ export default class AllProducts extends Component {
                     brightness, and contrast of each panel. If you’re looking
                     for a gift for a close person, this is a great choice.
                   </p>
+                  <span className="price">$725.00</span>
+                  <button className="add-to-cart">Buy Now</button>
                 </div>
               </div>
             </div>

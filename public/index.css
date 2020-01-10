@@ -12,26 +12,33 @@
   justify-content: center;
   background-color: goldenrod;
 }
-.links,
+
 .product {
   margin: 10px;
+  width: 35%;
 }
-.links.active { background-color: red; }
+.links.active {
+  background-color: red;
+}
 .nav {
   display: flex;
   justify-content: flex-end;
 }
 
 .thumbnail {
-  width: 35%;
+  width: 90%;
 }
 .product-grid {
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: space-evenly;
 }
 
 .facts {
   display: flex;
+  width: 1200px;
+  margin: 15px;
+  height: 300px;
 }
 .fact-page {
   display: flex;
@@ -48,4 +55,26 @@
 }
 .fails-page {
   background-color: peru;
+}
+.links {
+  margin: 10px;
+}
+.fact-pics {
+  width: 35%;
+}
+.sub-fact {
+  background-color: antiquewhite;
+}
+.fails-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+.video-links {
+  margin: 15px;
+  width: 40%;
+}
+.product-title {
+  display: flex;
+  justify-content: center;
 }

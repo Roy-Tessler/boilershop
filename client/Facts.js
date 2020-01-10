@@ -8,7 +8,7 @@ export default class Facts extends Component {
         <h1 className="fact-page">Time you enjoy wasting is not wasted time</h1>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cropped-hand-of-man-holding-adhesive-note-with-royalty-free-image-1577480229.jpg?crop=0.88889xw:1xh;center,top&resize=980:*"
           />
           <div className="sub-fact">
@@ -24,7 +24,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/chef-holding-large-bowl-in-commercial-kitchen-royalty-free-image-1577480935.jpg?crop=1xw:1xh;center,top&resize=980:*"
           />
           <div className="sub-fact">
@@ -43,7 +43,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -60,7 +60,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -77,7 +77,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -94,7 +94,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -111,7 +111,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -128,7 +128,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -145,7 +145,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -162,7 +162,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">
@@ -179,7 +179,7 @@ export default class Facts extends Component {
         </div>
         <div className="facts">
           <img
-            className="thumbnail"
+            className="fact-pics"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bride-looking-away-royalty-free-image-1577482042.jpg?crop=0.447xw:1.00xh;0.316xw,0&resize=980:*"
           />
           <div className="sub-fact">

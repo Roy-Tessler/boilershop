@@ -13,76 +13,77 @@ export default class Fails extends Component {
           words will pour in where your lost words should be. Open a gap for
           them, create a space. Be patient.
         </h1>
-
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/gbeZFI6Wcuc"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Bf7l59o4A9g"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/5boZWjK-suQ"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Bf7l59o4A9g"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/T5yXVAj3-9o"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/GV3XsqeoHU4"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div className="video-links">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Ap-FwDwoKnI"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <div className="fails-container">
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/gbeZFI6Wcuc"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Bf7l59o4A9g"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/5boZWjK-suQ"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Bf7l59o4A9g"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/T5yXVAj3-9o"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/GV3XsqeoHU4"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="video-links">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Ap-FwDwoKnI"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     );

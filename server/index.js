@@ -71,6 +71,17 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500).send(err.message || "Internal server error.");
 });
 
+//Weather App//
+
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+const DARK_SKY_API_KEY = process.env.DARK_SKY_API_KEY;
+
+app.post("/weather", (req, res) => {
+  console.log(req.body);
+});
+
 // initialization
 const port = process.env.PORT || 3000; // this can be very useful if you deploy to Heroku!
 db.sync().then(() => {
